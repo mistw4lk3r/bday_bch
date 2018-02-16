@@ -1,0 +1,50 @@
+<style>
+  body {
+    margin: 0; 
+    padding: 0; 
+    font-family: 'lato'; 
+    background-image: url(img/cloud_bg.png);
+    background-size: cover;
+    background-repeat: no-repeat;
+  }
+  .container {
+    position: relative;
+    height: 100%;
+  }
+  .big-cake {
+    width: 306px;
+    height: 380px;
+    background-image: url(img/big_cake.png);
+    background-size: cover;
+    background-repeat: no-repeat;
+    position: absolute;
+    left: 0;
+    right: 0;
+    margin: 0 auto;
+    -webkit-animation-name: anim_cake;
+    -webkit-animation-duration: 3000ms;
+    top: 55%;
+  }
+
+  /* Animations */
+
+  @-webkit-keyframes anim_cake {
+    0% {
+      top: -380px;
+    }
+    35% {
+      top: -380px;
+    }
+    100% {
+      top: 55%;
+    }
+  }
+</style>
+<body>
+  <div class="container">
+    <div class="big-cake">
+
+    </div>
+  </div>
+</body>
+</html>
