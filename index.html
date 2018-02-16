@@ -10,6 +10,7 @@
   .container {
     position: relative;
     height: 100%;
+    overflow: hidden;
   }
   .big-cake {
     width: 306px;
@@ -21,30 +22,271 @@
     left: 0;
     right: 0;
     margin: 0 auto;
-    -webkit-animation-name: anim_cake;
-    -webkit-animation-duration: 3000ms;
-    top: 55%;
+    bottom: 400px;
+    -webkit-animation: anim_cake 2s ease-out;
+  }
+
+  .birthday-text {
+    width: 500px;
+    height: 256px;
+    background-image: url(img/birthday_text.png);
+    background-size: cover;
+    background-repeat: no-repeat;
+    position: absolute;
+    left: 0;
+    right: 0;
+    margin: 0 auto;
+    bottom: 100px;
+    -webkit-animation-name: anim_text;
+    -webkit-animation-duration: 2000ms;
+    opacity: 1;
+    transform: scale(1);
+  }
+
+  .micuenta {
+    width: 102px;
+    height: 216px;
+    background-image: url(img/globo_micuenta.png);
+    background-size: cover;
+    background-repeat: no-repeat;
+    margin-left: 5%;
+    position: absolute;
+    left: 0;
+    bottom: 75%;
+    -webkit-animation: globo75 4s linear 1, sideWaysMiCuenta 4s ease-in-out 1;
+  }
+
+  .miseguro {
+    width: 102px;
+    height: 216px;
+    background-image: url(img/globo_miseguro.png);
+    background-size: cover;
+    background-repeat: no-repeat;
+    margin-left: 10%;
+    position: absolute;
+    left: 0;
+    bottom: 62%;
+    -webkit-animation: globo62 4s linear 1, sideWaysMiSeguro 4s ease-in-out 1;
+  }
+
+  .miinversion {
+    width: 102px;
+    height: 216px;
+    background-image: url(img/globo_miinversion.png);
+    background-size: cover;
+    background-repeat: no-repeat;
+    margin-left: 23%;
+    position: absolute;
+    left: 0;
+    bottom: 69%;
+    -webkit-animation: globo69 4s linear 1, sideWaysMiInversion 4s ease-in-out 1;
+  }
+
+  .mipago {
+    width: 102px;
+    height: 216px;
+    background-image: url(img/globo_mipago.png);
+    background-size: contain;
+    background-repeat: no-repeat;
+    margin-right: 5%;
+    position: absolute;
+    right: 0;
+    bottom: 75%;
+    -webkit-animation: globo75 4s linear 1, sideWaysMiPago 4s ease-in-out 1;
+  }
+
+  .miplata {
+    width: 102px;
+    height: 216px;
+    background-image: url(img/globo_miplata.png);
+    background-size: cover;
+    background-repeat: no-repeat;
+    margin-right: 10%;
+    position: absolute;
+    right: 0;
+    bottom: 62%;
+    -webkit-animation: globo62 4s linear 1, sideWaysMiPlata 4s ease-in-out 1;
+  }
+
+  .mibeneficio {
+    width: 102px;
+    height: 216px;
+    background-image: url(img/globo_mibeneficio.png);
+    background-size: cover;
+    background-repeat: no-repeat;
+    margin-right: 23%;
+    position: absolute;
+    right: 0;
+    bottom: 69%;
+    -webkit-animation: globo69 4s linear 1, sideWaysMiBeneficio 4s ease-in-out 1;
   }
 
   /* Animations */
 
-  @-webkit-keyframes anim_cake {
+  @keyframes anim_cake {
     0% {
-      top: -380px;
+      bottom: 1780px;
     }
-    35% {
-      top: -380px;
+    50% {
+      bottom: 1780px;
     }
     100% {
-      top: 55%;
+      bottom: 400px;
     }
   }
+
+  @keyframes anim_text {
+    0% {
+      opacity: 0;
+      transform: scale(0.1);
+    }
+    80% {
+      opacity: 0;
+      transform: scale(0.1);
+    }
+    100% {
+      opacity: 1;
+      transform: scale(1);
+    }
+  }
+
+  @keyframes globo75 {
+    0% {
+      bottom: -230px;
+    }
+    50% {
+      bottom: -230px;
+    }
+    100% {
+      bottom: 75%;
+    }
+  }
+
+  @keyframes globo62 {
+    0% {
+      bottom: -230px;
+    }
+    50% {
+      bottom: -230px;
+    }
+    100% {
+      bottom: 62%;
+    }
+  }
+
+  @keyframes globo69 {
+    0% {
+      bottom: -230px;
+    }
+    50% {
+      bottom: -230px;
+    }
+    100% {
+      bottom: 69%;
+    }
+  }
+
+  @keyframes sideWaysMiCuenta { 
+    0% { 
+      margin-left: 5%;
+    }
+    50% { 
+      margin-left: 10%;
+    }
+    75% { 
+      margin-left: 35%;
+    }
+    100% { 
+      margin-left: 5%;
+    }
+  }
+
+  @keyframes sideWaysMiSeguro { 
+    0% { 
+      margin-left: 30%;
+    }
+    50% { 
+      margin-left: 15%;
+    }
+    75% { 
+      margin-left: 0%;
+    }
+    100% { 
+      margin-left: 10%;
+    }
+  }
+
+  @keyframes sideWaysMiInversion { 
+    0% { 
+      margin-left: 30%;
+    }
+    50% { 
+      margin-left: 15%;
+    }
+    75% { 
+      margin-left: 0%;
+    }
+    100% { 
+      margin-left: 23%;
+    }
+  }
+
+  @keyframes sideWaysMiPago { 
+    0% { 
+      margin-right: 5%;
+    }
+    50% { 
+      margin-right: 10%;
+    }
+    75% { 
+      margin-right: 35%;
+    }
+    100% { 
+      margin-right: 5%;
+    }
+  }
+
+  @keyframes sideWaysMiPlata { 
+    0% { 
+      margin-right: 30%;
+    }
+    50% { 
+      margin-right: 15%;
+    }
+    75% { 
+      margin-right: 0%;
+    }
+    100% { 
+      margin-right: 10%;
+    }
+  }
+
+  @keyframes sideWaysMiBeneficio { 
+    0% { 
+      margin-right: 30%;
+    }
+    50% { 
+      margin-right: 15%;
+    }
+    75% { 
+      margin-right: 0%;
+    }
+    100% { 
+      margin-right: 23%;
+    }
+  }
+
 </style>
 <body>
   <div class="container">
-    <div class="big-cake">
-
-    </div>
+    <div class="big-cake"></div>
+    <div class="birthday-text"></div>
+    <div class="micuenta"></div>
+    <div class="miseguro"></div>
+    <div class="miinversion"></div>
+    <div class="mipago"></div>
+    <div class="mibeneficio"></div>
+    <div class="miplata"></div>
   </div>
 </body>
 </html>
